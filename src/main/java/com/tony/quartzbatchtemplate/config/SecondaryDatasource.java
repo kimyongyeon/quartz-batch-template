@@ -1,0 +1,48 @@
+package com.tony.quartzbatchtemplate.config;
+
+import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+
+import javax.sql.DataSource;
+
+@Configuration
+public class SecondaryDatasource {
+
+//   @Bean(name="secondaryDataSource")
+//   @ConfigurationProperties(prefix="spring.secondary.datasource")
+//   public DataSource dataSource() {
+//
+//      return DataSourceBuilder.create().build();
+//   }
+
+//   @Bean(name="secondTm")
+//   public DataSourceTransactionManager transactionManager(@Autowired @Qualifier("dataSource") DataSource dataSource) {
+//      return new DataSourceTransactionManager(dataSource);
+//   }
+
+//   @Primary
+//   @Bean(name="sqlSessionFactory")
+//   public SqlSessionFactory sqlSessionFactoryBean(@Autowired @Qualifier("dataSource") DataSource dataSource, ApplicationContext applicationContext)
+//      throws Exception {
+//      SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+//      factoryBean.setDataSource(dataSource);
+//      factoryBean.setConfigLocation(applicationContext.getResource("classpath:mybatis-config-primary.xml"));
+//      factoryBean.setMapperLocations(applicationContext.getResources("classpath:mapper-primary/**/*.xml"));
+//      return factoryBean.getObject();
+//   }
+
+//   @Primary
+//   @Bean(name="sqlSession")
+//   public SqlSessionTemplate sqlSession(@Autowired @Qualifier("sqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
+//      return new SqlSessionTemplate(sqlSessionFactory);
+//   }
+
+
+}
